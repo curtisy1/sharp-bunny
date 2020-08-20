@@ -21,9 +21,9 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet build --configuration Release --no-restore
+    #- name: Test
+      #run: dotnet test --no-restore --verbosity normal
     - name: Create the package
       run: dotnet pack --configuration Release sharp-bunny
     - name: Publish the package to GPR
