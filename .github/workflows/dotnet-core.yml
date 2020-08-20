@@ -26,7 +26,5 @@ jobs:
       #run: dotnet test --no-restore --verbosity normal
     - name: Create the package
       run: dotnet pack --configuration Release
-    - name: Where are we
-      run: ls -la
     - name: Publish the package to GPR
-      run: dotnet nuget push bin/Release/*.nupkg
+      run: dotnet nuget push src/sharp-bunny/bin/Release/*.nupkg
